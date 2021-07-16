@@ -1,0 +1,51 @@
+.account-sidebar {
+    background: #212529;
+    font-size: 0.9rem;
+}
+
+.account-sidebar .user-image {
+    width: 120px;
+    height: 120px;
+    margin: 25px auto 8px;
+
+}
+
+.account-sidebar ul.user-nav {
+    list-style: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .05)
+}
+
+.account-sidebar ul.user-nav li {
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    border-top: 1px solid rgba(255, 255, 255, .05);
+    margin: 0;
+    padding: 1rem 1.5rem;
+}
+
+.account-sidebar ul.user-nav li i {
+    padding-right: .5rem;
+}
+
+.account-sidebar ul.user-nav li.active a,
+.account-sidebar ul.user-nav li:hover a {
+    color: #FFF;
+}
+
+.account-sidebar ul.user-nav li a {
+    color: #888;
+}
+
+.account-sidebar ul.user-nav li a:focus,
+.account-sidebar ul.user-nav li a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media (max-width:767px) {
+    .avatar{
+        display: none;
+    }
+}
+

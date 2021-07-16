@@ -1,0 +1,369 @@
+
+/*----------------- CSS pour la partie Messagerie ----------- */
+
+/* get-box et send-box empty*/
+.empty{
+	color: #aaa;
+	padding-top: 6rem;
+}
+/* Hover envelope */
+.fa-envelope:hover:before{
+	font-family: "Font Awesome 5 Pro"; 
+	font-weight: 900; 
+	content: "\f2b6" !important;
+	color: #999;
+}
+
+.fa-envelope-open:hover:before{
+	font-family: "Font Awesome 5 Pro"; 
+	font-weight: 900; 
+	content: "\f0e0" !important;
+	color: #343a40;
+}
+
+/* NavBar  */ 
+/* Plus au dessus de nouveau Message */
+.addMessage {
+	position: absolute;
+	font-size: 18px;
+	left: 161px;
+	top: 11px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: center;
+	border-radius: 8px;
+}
+/* ---end--- */
+
+/* Barre Annex pour EmojiPopper*/
+.annex {
+	position: relative;
+	height: 40px;
+	border-bottom-right-radius: 0.25rem ;
+	border-bottom-left-radius: 0.25rem ;
+	font-size: small;
+	text-align: end;
+}
+/* emoji */
+.emoji-new{
+	position: absolute;
+	bottom: 38px;
+	right: -7px;
+}
+.emoji-reply{
+	position: relative;
+	bottom: 35px;
+	right: -8px;
+}
+.emoji-reply-all{
+	position: relative;
+	bottom: 35px;
+	right: -8px;
+}
+/* ---end--- */
+
+/* Bouton envoyer */
+#write-send{
+	margin: 0 !important;
+	border: none;
+}
+
+@media (max-width:450px) {
+	#write-send, .reply-send, .reply-send-all{
+		display: none;
+	}
+	#write-send-mobil, #reply-send-mobil, #reply-send-all-mobil{
+		display: inherit !important;
+		position: relative;
+		bottom: 20px;
+	}
+}
+/* ---end--- */
+
+/* Textarea */
+#message-reply {
+	resize: none;
+}
+#message-reply-all {
+	resize: none;
+}
+.form-group{
+	margin-bottom: 0  !important;
+}
+/* ---end--- */
+
+/* Modal Report */
+.modal-report{
+	width: 800px !important;
+}
+
+/* Select 2 */
+.select2-container .select2-search--inline .select2-search__field{
+	height: 25px !important;
+}
+
+/* Boite de reception et Messages envoyés */
+	.listMessages a {
+		color: #000;
+	}
+	.listMessages a:hover {
+		text-decoration: none;
+	}
+	.listMessages {
+		overflow-y: scroll;
+		height: 545px;
+	}
+
+	.listMessages .bg-mail {
+		background-color: #dc3545;
+	}
+
+	/*--- Hauteurs list Message ---*/
+	.listMessages .mpline {
+		border-color: #555;
+		margin-bottom: 2px;
+		background-color: #f3F3F3;
+		height: 45px;
+	}
+
+	.listMessages .mpline .readUnread {
+	position: absolute;
+	top: -6px;
+	left: 6px;
+	}
+
+	.listMessages .mpline .envelope {
+	cursor: pointer;
+	color: #999;
+	}
+
+	.listMessages .mpline .envelope.fa-envelope {
+	color: #333;
+	}
+
+	.listMessages .mpline .mp-date {
+	font-size: .8125rem !important;
+	color: #888;
+	width: 170px;
+	}
+
+	.listMessages .mpline .mp-date i {
+	font-size: .875rem !important;
+	color: #999;
+	cursor: pointer;
+	}
+
+	.listMessages .mpline .mp-date i:hover {
+	color: #333;
+	}
+
+	.listMessages .mpline .mp-date .arrow i {
+	font-size: 1rem !important;
+	}
+
+	.listMessages .mpline .mp-date .markread {
+	position: absolute;
+	top: 0;
+	left: 60px;
+	}
+
+	.listMessages .mpline .mp-sender {
+	width: 170px;
+	}
+
+	.listMessages .mpline:focus {
+	-webkit-box-shadow: 0 2px 4px rgba(136, 136, 136, 0.5);
+			box-shadow: 0 2px 4px rgba(136, 136, 136, 0.5);
+	}
+
+	.listMessages .mpline:focus .arrow {
+	margin-right: -.4rem;
+	}
+
+	.listMessages .mpline:focus .arrow i {
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	}
+
+	.listMessages .mpline:hover {
+	-webkit-box-shadow: 0 2px 4px rgba(136, 136, 136, 0.5);
+			box-shadow: 0 2px 4px rgba(136, 136, 136, 0.5);
+	}
+
+	.listMessages .mpline:hover .arrow {
+	margin-right: -.4rem;
+	}
+
+	.listMessages .mpline:hover .arrow i {
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	}
+
+	.listMessages .mail .icon i:hover {
+	color: rgba(220, 53, 69, 0.9);
+	cursor: pointer;
+	}
+
+	.listMessages #get-box .collapsing {
+	-webkit-transition: none;
+	transition: none;
+	}
+
+	.listMessages .tooltip {
+	font-size: .625rem !important;
+	}
+
+	.listMessages .tooltip .tooltip-inner {
+	background-color: #333;
+	border-bottom-color: #333;
+	}
+
+	.listMessages .tooltip .arrow:before {
+	border-bottom-color: #333;
+	}
+
+	#write-message #write-send {
+	max-width: 100px;
+	margin-left: 20px;
+	}
+
+	#write-message #username-to i {
+	color: #A9071E !important;
+	}
+
+	#write-message .input-group {
+	border: 1px solid #ddd;
+	background-color: transparent;
+	margin-bottom: .8rem;
+	}
+
+	#write-message .input-group input {
+	border: none;
+	background-color: transparent;
+	}
+
+	#write-message #autoComplete {
+	position: absolute;
+	border-top: none !important;
+	left: 19px;
+	top: 111px;
+	width: 276px;
+	z-index: 1050;
+	}
+
+	#write-message #autoComplete option {
+	padding: 3px 10px;
+	}
+
+	#write-message #autoComplete option:hover {
+	background-color: #ddd;
+	cursor: pointer;
+	border-radius: 5px;
+	}
+
+	#write-message #to {
+	width: 280px;
+	}
+
+	#write-message .tooltip {
+	font-size: .625rem !important;
+	}
+
+	#write-message .tooltip .tooltip-inner {
+	background-color: #333;
+	border-bottom-color: #333;
+	}
+
+	#write-message .tooltip .arrow:before {
+	border-left-color: #333;
+	}
+
+	.pagination .page-link {
+	color: #A9071E;
+	}
+
+	.pagination .active .page-link {
+	border-color: #901717;
+	background: #A9071E;
+	color: white;
+	}
+
+	.last-answer-card a:hover .topic-title-radiant {
+	background-color: #a9a9a9;
+	color: white;
+	}
+
+	.last-answer-card a:hover .topic-title-radiant .fa-bullhorn {
+	background-color: white;
+	color: #A9071E;
+	}
+
+	.last-answer-card a:hover .grey-radiant {
+	color: #6e6e6e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(transparent));
+	background: linear-gradient(#ffffff, transparent);
+	}
+
+	.last-answer-card a:hover .grey-radiant .fa-quote-left, .last-answer-card a:hover .grey-radiant .fa-quote-right {
+	color: #A9071E;
+	}
+
+/* ---end--- */
+
+@media (max-width:767px) {
+
+	#imgAvatar{
+		display: none;
+	}
+	
+	.account-overview .desktop{
+		display: none !important;
+	}
+	
+	.account-overview .mobile{
+		display: block !important;
+	}	
+
+	.select2-selection, .select2-container{
+		width: 170px !important;
+	}
+
+	.band{
+		height: 20px;
+	}
+	.action-date{
+		position: relative;
+		left: 100px;
+		bottom: 20px;
+	} 
+	.listMessages .mpline {
+		height: 130px;
+	}
+
+	.account-overview div.info-group p:last-child {
+		font-weight: 400;
+		font-size: .9rem;
+	}
+}
+
+.account-overview .desktop{
+	display: block;
+}
+
+.account-overview .mobile{
+	display: none;
+}
+
+.account-overview div.info-group p:first-child {
+    font-weight: 300;
+    margin-bottom: .2rem;
+    color: #99a0a9;
+}
+
+#imgAvatar{
+	width: 50px; 
+	height: 50px;
+}
+

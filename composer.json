@@ -1,0 +1,33 @@
+{
+    "name": "axessweb/bfmania",
+    "description": "Website bfmania",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "prefer-stable": true,
+     "authors": [
+        {
+            "name": "Axel Wargnier",
+            "email": "axel@axessweb.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-fileinfo": "*",
+        "framework-w/framework-w": "^2.1",
+        "behat/transliterator": "^1.3",
+        "intervention/image": "^2.5",
+        "ifsnop/mysqldump-php": "^2.9",
+        "jenssegers/agent": "^2.6",
+        "jenssegers/date": "^3.5",
+        "google/recaptcha": "1.2",
+        "respect/validation": "^2.1",
+        "ramsey/uuid": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "app/"
+        }
+    }
+}

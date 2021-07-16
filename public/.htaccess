@@ -1,0 +1,82 @@
+# Session timeout
+# durée 10 jours (86400 = 1 jour)
+php_value session.cookie_lifetime 864000 
+php_value session.gc_maxlifetime 864000
+php_value short_open_tag 0
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+	# Redirection HTTPS CloudFlare
+	RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+	RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+	# PIQUÉ AU HTACCESS DE SYMFONY2 : 
+	# Determine the RewriteBase automatically and set it as environment variable.
+	# If you are using Apache aliases to do mass virtual hosting or installed the
+	# project in a subdirectory, the base path will be prepended to allow proper
+	# resolution of the index.php file and to redirect to the correct URI. It will
+	# work in environments without path prefix as well, providing a safe, one-size
+	# fits all solution.
+	RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+	RewriteRule ^(.*) - [E=W_BASE:%1]
+
+	# Pas de réécriture sur les vrais fichiers
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteRule .? - [L]
+
+	# Réécrit tout le reste à public/index.php.
+	RewriteRule .? %{ENV:W_BASE}/index.php [L]
+</IfModule>
+
+
+# Mise en cache navigateur
+#<IfModule mod_expires.c>
+#	ExpiresActive On
+#	ExpiresDefault 							"access plus 7200 seconds"
+#	ExpiresByType video/ogg 				"access plus 6 week"
+#	ExpiresByType video/mp4 				"access plus 6 week"
+#	ExpiresByType video/webm 				"access plus 6 week"
+#	ExpiresByType image/jpg 				"access plus 2 week"
+#	ExpiresByType image/jpeg 				"access plus 2 week"
+#	ExpiresByType image/png 				"access plus 2 week"
+#	ExpiresByType image/gif 				"access plus 2 week"
+#	ExpiresByType image/svg+xml				"access plus 2 week"
+#	ExpiresByType image/ico 				"access plus 2 week"
+#	ExpiresByType image/icon 				"access plus 2 week"
+#	ExpiresByType image/x-icon 				"access plus 1 week"
+#	ExpiresByType text/css 					"access plus 1 week"
+#	ExpiresByType text/javascript 			"access plus 1 week"
+#	ExpiresByType text/html					"access plus 7200 seconds"
+#	ExpiresByType application/xhtml+xml 	"access plus 7200 seconds"
+#	ExpiresByType application/javascript 	"access plus 1 week"
+#	ExpiresByType application/x-javascript 	"access plus 1 week"
+#</IfModule>
+
+#<IfModule mod_headers.c>
+#	Header always append X-Frame-Options SAMEORIGIN
+#	Header set Cache-Control "max-age=86400, private, must-revalidate"
+#	#Header unset ETag
+#	#FileETag none
+#
+#	<FilesMatch "\\.(ogg|mp4|webm|5184000)$">
+#	Header set Cache-Control "max-age=2592000"
+#	</FilesMatch>
+#
+#	<FilesMatch "\\.(ico|jpe?g|png|gif)$">
+#	Header set Cache-Control "max-age=2592000"
+#	</FilesMatch>
+#
+#	<FilesMatch "\\.(css|less)$">
+#	Header set Cache-Control "max-age=2592000"
+#	</FilesMatch>
+#
+#	<FilesMatch "\\.(js)$">
+#	Header set Cache-Control "max-age=604800, private"
+#	</FilesMatch>
+#
+#	<FilesMatch "\\.(html?|php)$">
+#	Header set Cache-Control "max-age=86400, private, must-revalidate"
+#	</FilesMatch>
+#</IfModule>

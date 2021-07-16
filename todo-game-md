@@ -1,0 +1,78 @@
+## Questions pour Axel 
+
+  ## Game
+  - queries taille ecran
+  - vue mobile
+
+## Game => Integration en cours
+- snake - https://romain-semler.fr/jeux/snake/ 
+  => OKEY
+- space invaders - https://codepen.io/adelciotto/pen/BHuGL
+  => OKEY
+- pong - https://codepen.io/gdube/pen/JybxxZ
+  => OKEY
+- tetris - https://github.com/Aerolab/blockrain.js
+  => OKEY
+- rocket - https://codepen.io/FRADAR/pen/QWGzaEN
+  => OKEY
+- Air Balloon - https://codepen.io/HunorMarton/pen/VwKOqdY
+  => OKEY
+- Doodle jump - https://codepen.io/ainc/pen/ZxGXwd
+  => OKEY
+- Stick Hero - https://codepen.io/nguyencaotai1969/pen/BaQabwJ
+  => OKEY -> injection ligne de code dans vue !!!
+- Flappy-Bird -https://github.com/D4rk1n/JS-Flappy-Bird
+  => OKEY 
+- Tilt it - https://codepen.io/FRADAR/pen/LYbqEMq
+  => OKEY
+- Memory Game - https://codepen.io/mafevito/pen/abJGpNK
+  => Score = Time
+
+## Game => SCORE ????
+- sudoku - https://codepen.io/Mobius1/pen/EmJEoJ
+  => SCORE ?
+- something in space - https://codepen.io/FRADAR/pen/YzNoKXm
+  => OKEY Record Score with 2 modes (EASY/HARD) ?
+- Jeu pendu - https://github.com/Fred-Vaniss/jeu-pendu
+  => Score ? temps ? nombres de cliques ? nombres de parties reussi
+- Tic Tac Toe - https://codepen.io/rpora/pen/LWVagQ
+  => Score ? temps ? nombres de cliques ? nombres de parties reussi
+- copycat: game - https://codepen.io/FRADAR/pen/KKaYbqW
+  => OKEY SCORE ??? Seulement 6 niveaux 
+- jeux de dame - http://boots931.free.fr/sections.jeux.de.dames.htm
+  => Score ??
+- jeux d'echec -https://zeyu2001.github.io/chess-ai/
+  => Score Amélioration UX / Attention template
+
+## Game => BUG !!!!!!
+- Dinosaur - https://codepen.io/jonslater204/pen/oNYqEKg
+  => Selection du score
+- pac man - https://codepen.io/hellokatili/pen/xwKRmo 
+  => fonction non appelée
+- Radius Raid - http://js13kgames.com/games/radius-raid/index.html
+  => conflit avec JQUERY
+- Pop the lock - https://codepen.io/FRADAR/pen/PopRdZJ
+  => Css qui part en vrille 
+- Block Ninja - https://codepen.io/FRADAR/pen/BapRXPy
+  => Trouver solution gestion echelle
+- Dental Defender:
+  https://code-projects.org/dental-defender-game-in-javascript-with-source-code/
+  https://cas002.itch.io/dental-defenders-saga-of-the-candy-horde
+  => Utilisation de la libraire Phaser ( Game Engine)
+- Cut it out - https://codepen.io/FRADAR/pen/BaQGeeP
+  => Integration
+- Cube - https://codepen.io/FRADAR/pen/oNBGwqX
+  => CSS ERROR
+- Minesweeper - https://codepen.io/geoffbuell/details/gOwdqXg
+  => Integration a faire
+- Pixel dance - https://codepen.io/arkhlima/details/MypWbv
+  => Integration
+- Space ranger - https://codepen.io/edalgrin/details/vYyGLXO
+  => Integration
+
+## OUT
+- Flash cards - https://codepen.io/pirtwo/pen/JjbaBRv
+  => REACT
+
+Liste de jeux / dernière position de la recherche => https://codepen.io/tag/game?cursor=ZD0xJm89MCZwPTg2
+

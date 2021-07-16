@@ -1,0 +1,11 @@
+/docs/
+/vendor/
+app/config.php
+app/config.distphp
+*.log
+composer.lock
+*.sublime-workspace
+/public/assets/uploads/
+*.sublime-workspace
+.DS_Store
+/chat/node_modules/

@@ -1,0 +1,37 @@
+.chat{
+    height: 218px ;
+    background-color: #ccc;
+    
+}
+
+#messages{
+    height: 150px;
+    overflow-y: scroll;   
+}
+/* #writing{
+    height: 26px;
+} */
+#message-chat{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important; 
+    border-right: none; 
+    border: none;  
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+.send-chat{
+    background-color: #a9071e;
+    color: white;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important; 
+
+}
+
+/* emoji */
+.emojichat{
+	background-color: white;
+    border-radius: 0;
+    border: none;   
+    text-align: end;
+}

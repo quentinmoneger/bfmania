@@ -1,0 +1,159 @@
+#container{
+  height: 800px;
+  overflow: hidden;
+  background-image: url(https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80);
+  background-size: 120% 100%;
+  background-position: calc(var(--level, 0) * 0.1%) 50%;
+  color: white;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 1px;
+}
+
+#container:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(red));
+  background: linear-gradient(to bottom, transparent, red);
+  -webkit-transform: scaleY(var(--laser, 1));
+          transform: scaleY(var(--laser, 1));
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+#buzz {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out, filter 0.3s ease-in-out, -webkit-transform 0.1s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  will-change: transform, filter;
+}
+
+#buzz.active {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+#buzz-flame {
+  position: absolute;
+  left: 43%;
+  top: 40%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  will-change: transform;
+  -webkit-transform: rotateZ(-125deg) scaleY(var(--buzzFlame, 1));
+          transform: rotateZ(-125deg) scaleY(var(--buzzFlame, 1));
+}
+
+.coin {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  -webkit-transform: translate(calc(var(--x, 0) * 1px), calc(var(--y, 0) * 1px));
+          transform: translate(calc(var(--x, 0) * 1px), calc(var(--y, 0) * 1px));
+  will-change: transform;
+}
+
+.coin.bonus {
+  background-image: url(https://assets.codepen.io/5356857/energy.svg);
+}
+
+.coin.malus {
+  background-image: url(https://assets.codepen.io/5356857/asteroid.svg);
+}
+
+.coin.speedup {
+  background-image: url(https://assets.codepen.io/5356857/stopwatch.svg);
+}
+
+.coin.speeddown {
+  background-image: url(https://assets.codepen.io/5356857/snowflake.svg);
+}
+
+.coin.laser {
+  background-image: url(https://assets.codepen.io/5356857/laser.svg);
+}
+
+/* Interface */
+#ind-fuel {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+#ind-score {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+#ind-points {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(109, 59, 113, 0.3);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.modal.deactive {
+  display: none;
+}
+
+.modal .modal-dialog {
+  background-color: rgba(100, 183, 60, 0.3);
+  padding: 30px;
+  text-align: center;
+}
+
+.modal .modal-dialog .grey {
+  color: black;
+}
+
+.modal .modal-dialog .green {
+  color: lightgreen;
+}
+
+.modal .modal-dialog .red {
+  color: red;
+}
+
+.modal .modal-dialog button {
+  font: inherit;
+  border: none;
+  background-color: #4d2a4f;
+  color: inherit;
+  padding: 0.5rem 3rem 0.2rem;
+  cursor: pointer;
+}
